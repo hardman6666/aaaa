@@ -69,8 +69,7 @@ def venv_install():
     SyS(f'pv {fn} | lz4 -d | tar xf -')
     Path(fn).unlink()
 
-    SyS(f'rm -rf {VNV}/bin/pip* {VNV}/bin/python*')
-
+    
     n = [
         f'python3 -m venv {VNV}',
         f'{VNV}/bin/python3 -m pip install -U --force-reinstall pip',
